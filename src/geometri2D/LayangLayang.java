@@ -8,6 +8,6 @@ package geometri2D;
  *
  * @author Lenovo
  */
-public class Jajar_Genjang {
+public class LayangLayang {
     
 }
