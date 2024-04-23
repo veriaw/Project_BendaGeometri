@@ -14,7 +14,8 @@ public class BendaGeometri {
     
     public static void main(String[] args) {
         Balok b1 = new Balok(5,4,3);
-        System.out.println(b1.volume());
+        Kubus b2 = new Kubus(5);
+        System.out.println(b2.volume());
     }
     
 }
