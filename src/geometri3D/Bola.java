@@ -20,5 +20,5 @@ public class Bola extends Lingkaran implements Geometri3D {
     public double volume() {
         return 1.3333*Math.PI*Math.pow(jari_jari,3);
     }
-    
+
 }
