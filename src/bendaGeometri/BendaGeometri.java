@@ -4,24 +4,17 @@
  */
 package bendaGeometri;
 
+import geometri3D.*;
+import geometri2D.*;
 /**
  *
  * @author Lenovo
  */
 public class BendaGeometri {
     
-    public double luas(){
-        System.out.println("Menghitung luas bangun datar!");
-        return 0;
-    }
-    
-    public double volume(){
-        System.out.println("Menghitung volume bangun datar!");
-        return 0;
-    }
-    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Balok b1 = new Balok(5,4,3);
+        System.out.println(b1.volume());
     }
     
 }

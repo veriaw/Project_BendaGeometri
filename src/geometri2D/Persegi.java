@@ -4,18 +4,17 @@
  */
 package geometri2D;
 
-import bendaGeometri.BendaGeometri;
+import bendaGeometri.*;
 
 /**
  *
  * @author Lenovo
  */
-public class Persegi extends BendaGeometri {
-    private double panjang, lebar;
+public class Persegi extends BendaGeometri implements Geometri2D{
+    protected double panjang;
     
-    public Persegi(double panjang, double lebar){
+    public Persegi(double panjang){
         this.panjang=panjang;
-        this.lebar=lebar;
     }
 
     public double getPanjang() {
@@ -26,17 +25,9 @@ public class Persegi extends BendaGeometri {
         this.panjang = panjang;
     }
 
-    public double getLebar() {
-        return lebar;
-    }
-
-    public void setLebar(double lebar) {
-        this.lebar = lebar;
-    }
-
     @Override
     public double luas() {
-        return panjang*lebar;
+        return panjang*panjang;
     }
     
 }
