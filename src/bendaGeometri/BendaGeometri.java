@@ -17,6 +17,7 @@ public class BendaGeometri {
         Kubus b2 = new Kubus(5);
         Prisma b3 = new Prisma(12,3,5);
         System.out.println(b3.volume());
+        System.out.println("MBuh");
     }
     
 }
