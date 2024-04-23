@@ -28,7 +28,7 @@ public class Lingkaran extends BendaGeometri implements Geometri2D{
     
     @Override
     public double luas() {
-        return Math.PI*jari_jari*jari_jari;
+        return Math.PI*Math.pow(jari_jari,2);
     }
     
 }
