@@ -35,7 +35,7 @@ public class Segitiga extends BendaGeometri implements Geometri2D {
 
     @Override
     public double luas() {
-        return 1/2*alas*tinggi;
+        return 0.5*alas*tinggi;
     }
     
     
