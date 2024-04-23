@@ -5,24 +5,33 @@
 package geometri3D;
 
 import bendaGeometri.*;
-import geometri2D.Persegi;
+import geometri2D.*;
 
 /**
  *
  * @author Lenovo
  */
-public class Balok extends Persegi implements Geometri3D {
+public class Balok extends PersegiPanjang implements Geometri3D {
     private double tinggi;
     
-    public Balok (double tinggi){
+    public Balok (double panjang, double lebar, double tinggi){
+        super(panjang,lebar);
+        this.tinggi = tinggi;
+    }
+
+    public double getTinggi() {
+        return tinggi;
+    }
+
+    public void setTinggi(double tinggi) {
         this.tinggi = tinggi;
     }
     
-    Persegi alas = new Persegi(panjang, lebar);
+    PersegiPanjang alas = new PersegiPanjang(panjang, lebar);
     
     @Override
     public double volume() {
-        return alas.luas()*lebar*tinggi;
+        return alas.luas()*tinggi;
     }
     
 }
