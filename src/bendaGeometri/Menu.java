@@ -7,6 +7,7 @@ package bendaGeometri;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -15,10 +16,15 @@ import javax.swing.JLabel;
  * @author adity
  */
 public class Menu extends JFrame implements ActionListener{
-
-    JLabel welcome = new JLabel("Selamat Datang!");
-    JLabel lanjutkan = new JLabel("Silakan Masuk Untuk Lanjutkan");
+    final private String[] geometri = {"2D","3D"};
+    final private String[] bangunDatar = {"Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang"};
+    final private String[] bangunRuang = {"Balok","Kubus","Prisma","Tabung","Kerucut","Bola"};
     
+    JLabel welcome = new JLabel("Benda Geometri");
+    JLabel lanjutkan = new JLabel("Pilih Geometri Terlebih Dahulu");
+    JComboBox bangun = new JComboBox(geometri);
+    JComboBox benda2D = new JComboBox(bangunDatar);
+    JComboBox benda3D = new JComboBox(bangunRuang);
     Menu () {
         setVisible(true);
         setSize(720, 550);
@@ -33,10 +39,22 @@ public class Menu extends JFrame implements ActionListener{
         add(lanjutkan);
         lanjutkan.setBounds(40, 55, 300, 35);
         lanjutkan.setFont(new Font("Arial", Font.ITALIC, 15));
+        
+        add(bangun);
+        bangun.setBounds(40, 80, 300, 35);
+        bangun.addActionListener(this);
     } 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if(bangun.getSelectedItem()=="2D"){
+            remove(benda3D);
+            add(benda2D);
+            benda2D.setBounds(40, 120, 300, 35);
+        }else{
+            remove(benda2D);
+            add(benda3D);
+            benda3D.setBounds(40, 120, 300, 35);
+        }
     }
 
      
