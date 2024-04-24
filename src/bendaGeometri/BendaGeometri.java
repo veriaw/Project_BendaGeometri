@@ -18,7 +18,7 @@ public class BendaGeometri {
         Prisma b3 = new Prisma(12,3,5);
         Bola b4 = new Bola(5);
         Lingkaran b5 = new Lingkaran(5);
-        System.out.println(b4.volume());
+        System.out.println(b3.volume());
         System.out.println("halah");
     }
     

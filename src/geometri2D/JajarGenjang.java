@@ -9,5 +9,5 @@ package geometri2D;
  * @author Lenovo
  */
 public class JajarGenjang {
-    
+     
 }
