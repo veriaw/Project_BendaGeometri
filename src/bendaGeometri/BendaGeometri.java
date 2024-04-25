@@ -13,7 +13,7 @@ import geometri2D.*;
 public class BendaGeometri {
     
     public static void main(String[] args) {
-        new Menu();
+        new MainMenu();
     }
     
 }
