@@ -15,7 +15,7 @@ import javax.swing.*;
  * @author Lenovo
  */
 public class MenuGeometriDatar extends JFrame implements ActionListener {
-    final private String[] bangunDatar = {"Select Bangun...","Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang", "Belah Ketupat", "Trapesium","Juring Lingkaran","Tembereng Lingkaran"};
+    final private String[] bangunDatar = {"Select Bangun...","Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang", "Belah Ketupat", "Trapesium","Juring Lingkaran","Tembereng Lingkaran","Cincin Lingkaran"};
     JLabel welcome = new JLabel("Benda Geometri 2D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
     JComboBox bangun = new JComboBox(bangunDatar);
@@ -132,6 +132,10 @@ public class MenuGeometriDatar extends JFrame implements ActionListener {
                 param1.setText("Jari Jari");
                 param2.setText("Derajat Sudut");
                 param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Cincin Lingkaran"){
+                param1.setText("Jari Jari");
+                param2.setText("Tinggi");
+                param3.setText("Not Used");
             }
         }else if(e.getSource()==hitung){
             if(bangun.getSelectedItem()=="Persegi"){
@@ -163,6 +167,9 @@ public class MenuGeometriDatar extends JFrame implements ActionListener {
                 value.setText(String.valueOf(b1.luas()));
             }else if(bangun.getSelectedItem()=="Tembereng Lingkaran"){
                 TemberengLingkaran b1 = new TemberengLingkaran(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
+                value.setText(String.valueOf(b1.luas()));
+            }else if(bangun.getSelectedItem()=="Tembereng Lingkaran"){
+                CincinLingkaran b1 = new CincinLingkaran(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
                 value.setText(String.valueOf(b1.luas()));
             }
         }else if(e.getSource()==kembali){
