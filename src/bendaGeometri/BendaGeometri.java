@@ -3,9 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package bendaGeometri;
-
-import geometri3D.*;
-import geometri2D.*;
 /**
  *
  * @author Lenovo

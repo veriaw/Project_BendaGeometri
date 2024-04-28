@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri3D;
+package bangunRuang;
 
-import bendaGeometri.Geometri3D;
-import geometri2D.Lingkaran;
+import bangunDatar.Lingkaran;
+import bendaGeometri.GeometriRuang;
 
 /**
  *
  * @author Lenovo
  */
-public class Bola extends Lingkaran implements Geometri3D {
+public class Bola extends Lingkaran implements GeometriRuang {
     public Bola (double jari_jari){
         super(jari_jari);
     }

@@ -4,19 +4,18 @@
  */
 package bendaGeometri;
 
-import geometri2D.*;
+import bangunDatar.Persegi;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-
 
 /**
  *
  * @author Lenovo
  */
 public class Menu2D extends JFrame implements ActionListener {
-    final private String[] bangunDatar = {"Select Bangun...","Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang"};
+    final private String[] bangunDatar = {"Select Bangun...","Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang", "Belah Ketupat", "Trapesium"};
     JLabel welcome = new JLabel("Benda Geometri 2D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
     JComboBox bangun = new JComboBox(bangunDatar);
@@ -117,6 +116,14 @@ public class Menu2D extends JFrame implements ActionListener {
                 param1.setText("Diagonal Horizontal");
                 param2.setText("Diagonal Vertikal");
                 param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Belah Ketupat"){
+                param1.setText("Diagonal Horizontal");
+                param2.setText("Diagonal Vertikal");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Trapesium"){
+                param1.setText("Sisi Atas");
+                param2.setText("Sisi Bawah");
+                param3.setText("Tinggi");
             }
         }else if(e.getSource()==hitung){
             if(bangun.getSelectedItem()=="Persegi"){

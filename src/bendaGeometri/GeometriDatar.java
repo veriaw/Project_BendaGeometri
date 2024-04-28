@@ -8,6 +8,6 @@ package bendaGeometri;
  *
  * @author Lenovo
  */
-public interface Geometri3D {
-    public double volume();
+public interface GeometriDatar {
+    public double luas();
 }

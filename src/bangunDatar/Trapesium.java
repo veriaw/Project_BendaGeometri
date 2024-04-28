@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri2D;
+package bangunDatar;
 
 import bendaGeometri.BendaGeometri;
-import bendaGeometri.Geometri2D;
+import bendaGeometri.GeometriDatar;
 
 /**
  *
  * @author adity
  */
-public class Trapesium extends BendaGeometri implements Geometri2D {
+public class Trapesium extends BendaGeometri implements GeometriDatar {
 protected double atas, bawah, tinggi;
     public Trapesium(double atas, double bawah, double tinggi){
         this.atas= atas;

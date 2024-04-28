@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri2D;
+package bangunDatar;
 
 import bendaGeometri.BendaGeometri;
-import bendaGeometri.Geometri2D;
+import bendaGeometri.GeometriDatar;
 
 /**
  *
  * @author Lenovo
  */
-public class Lingkaran extends BendaGeometri implements Geometri2D{
+public class Lingkaran extends BendaGeometri implements GeometriDatar{
     protected double jari_jari;
     public Lingkaran(double jari_jari){
         this.jari_jari=jari_jari;

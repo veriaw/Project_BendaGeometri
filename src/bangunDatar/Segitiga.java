@@ -2,23 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri2D;
+package bangunDatar;
 
 import bendaGeometri.BendaGeometri;
-import bendaGeometri.Geometri2D;
+import bendaGeometri.GeometriDatar;
 
 /**
  *
  * @author Lenovo
  */
-public class JajarGenjang extends BendaGeometri implements Geometri2D {
+public class Segitiga extends BendaGeometri implements GeometriDatar {
     protected double alas, tinggi;
-   
-    public JajarGenjang(double alas, double tinggi){
-        this.alas=alas;
+    public Segitiga(double alas, double tinggi){
+        this.alas= alas;
         this.tinggi=tinggi;
     }
-
     public double getAlas() {
         return alas;
     }
@@ -37,9 +35,8 @@ public class JajarGenjang extends BendaGeometri implements Geometri2D {
 
     @Override
     public double luas() {
-        return alas*tinggi;
+        return 0.5*alas*tinggi;
     }
-    
     
     
 }

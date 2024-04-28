@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri2D;
+package bangunDatar;
 
 import bendaGeometri.*;
 
@@ -10,7 +10,7 @@ import bendaGeometri.*;
  *
  * @author Lenovo
  */
-public class PersegiPanjang extends BendaGeometri implements Geometri2D{
+public class PersegiPanjang extends BendaGeometri implements GeometriDatar{
     protected double panjang, lebar;
     public PersegiPanjang(double panjang, double lebar){
         this.panjang= panjang;

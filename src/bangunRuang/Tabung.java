@@ -2,21 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri3D;
+package bangunRuang;
 
-import bendaGeometri.*;
-import geometri2D.*;
+import bangunDatar.Lingkaran;
+import bendaGeometri.GeometriRuang;
 
 /**
  *
  * @author Lenovo
  */
-public class Balok extends PersegiPanjang implements Geometri3D {
+public class Tabung extends Lingkaran implements GeometriRuang {
     private double tinggi;
     
-    public Balok (double panjang, double lebar, double tinggi){
-        super(panjang,lebar);
-        this.tinggi = tinggi;
+    public Tabung(double jari_jari, double tinggi){
+        super(jari_jari);
+        this.tinggi=tinggi;
     }
 
     public double getTinggi() {
@@ -27,7 +27,7 @@ public class Balok extends PersegiPanjang implements Geometri3D {
         this.tinggi = tinggi;
     }
     
-    PersegiPanjang alas = new PersegiPanjang(panjang, lebar);
+    Lingkaran alas = new Lingkaran(jari_jari);
     
     @Override
     public double volume() {

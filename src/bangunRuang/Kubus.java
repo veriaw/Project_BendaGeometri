@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri3D;
+package bangunRuang;
 
-import bendaGeometri.Geometri3D;
-import geometri2D.Persegi;
+import bangunDatar.Persegi;
+import bendaGeometri.GeometriRuang;
 
 /**
  *
  * @author Lenovo
  */
-public class Kubus extends Persegi implements Geometri3D  {
+public class Kubus extends Persegi implements GeometriRuang  {
 
     public Kubus (double panjang){
     super (panjang);    

@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package geometri3D;
+package bangunRuang;
 
-import bendaGeometri.Geometri3D;
-import geometri2D.Segitiga;
+import bangunDatar.Segitiga;
+import bendaGeometri.GeometriRuang;
 
 /**
  *
  * @author Lenovo
  */
-public class Prisma extends Segitiga implements Geometri3D {
+public class Prisma extends Segitiga implements GeometriRuang {
     private double tinggiPrisma;
     
     public Prisma(double alas, double tinggi, double tinggiPrisma){
