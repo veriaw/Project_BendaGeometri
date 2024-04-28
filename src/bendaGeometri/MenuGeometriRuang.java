@@ -13,7 +13,7 @@ import javax.swing.*;
  *
  * @author Lenovo
  */
-public class Menu3D extends JFrame implements ActionListener {
+public class MenuGeometriRuang extends JFrame implements ActionListener {
     final private String[] bangunRuang = {"Balok","Kubus","Prisma","Tabung","Kerucut","Bola"};
     JLabel welcome = new JLabel("Benda Geometri 3D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
@@ -26,7 +26,7 @@ public class Menu3D extends JFrame implements ActionListener {
     JTextField input3 = new JTextField();
     JButton hitung = new JButton("Hitung");
     JButton kembali = new JButton("kembali");
-    public Menu3D(){
+    public MenuGeometriRuang(){
         setVisible(true);
         setSize(720, 550);
         setTitle("Menu Geometri 3D");

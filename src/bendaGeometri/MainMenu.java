@@ -47,10 +47,10 @@ public class MainMenu extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==geometri2D){
-            new Menu2D();
+            new MenuGeometriDatar();
             this.dispose();
         }else{
-            new Menu3D();
+            new MenuGeometriRuang();
             this.dispose();
         }
         

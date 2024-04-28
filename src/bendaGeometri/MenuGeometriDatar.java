@@ -14,7 +14,7 @@ import javax.swing.*;
  *
  * @author Lenovo
  */
-public class Menu2D extends JFrame implements ActionListener {
+public class MenuGeometriDatar extends JFrame implements ActionListener {
     final private String[] bangunDatar = {"Select Bangun...","Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang", "Belah Ketupat", "Trapesium"};
     JLabel welcome = new JLabel("Benda Geometri 2D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
@@ -30,7 +30,7 @@ public class Menu2D extends JFrame implements ActionListener {
     JButton kembali = new JButton("kembali");
     JLabel hasil = new JLabel("Luas Bangun");
     JLabel value = new JLabel("[Tipe data double]");
-    Menu2D () {
+    MenuGeometriDatar () {
         setVisible(true);
         setSize(720, 550);
         setTitle("Menu Geometri 2D");
