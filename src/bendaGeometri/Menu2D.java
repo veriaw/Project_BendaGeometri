@@ -72,8 +72,12 @@ public class Menu2D extends JFrame implements ActionListener {
         hitung.addActionListener(this);
                 
         add(kembali);
+       
         kembali.setBounds(150, 285, 100, 30);
         kembali.addActionListener(this);
+        
+        //MainMenu mainMenu  = new MainMenu(); // MenuUtama adalah kelas untuk menu sebelumnya
+        //mainMenu.setVisible(true);
     }
 
     @Override
