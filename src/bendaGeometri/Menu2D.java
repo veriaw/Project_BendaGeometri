@@ -4,6 +4,7 @@
  */
 package bendaGeometri;
 
+import geometri2D.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,10 +16,11 @@ import javax.swing.*;
  * @author Lenovo
  */
 public class Menu2D extends JFrame implements ActionListener {
-    final private String[] bangunDatar = {"Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang"};
+    final private String[] bangunDatar = {"Select Bangun...","Persegi","Persegi Panjang","Lingkaran","Segitiga","Jajar Genjang","Layang Layang"};
     JLabel welcome = new JLabel("Benda Geometri 2D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
     JComboBox bangun = new JComboBox(bangunDatar);
+    JButton pilih = new JButton("Pilih");
     JLabel param1 = new JLabel("Parameter 1");
     JLabel param2 = new JLabel("Parameter 2");
     JLabel param3 = new JLabel("Parameter 3");
@@ -27,6 +29,8 @@ public class Menu2D extends JFrame implements ActionListener {
     JTextField input3 = new JTextField();
     JButton hitung = new JButton("Hitung");
     JButton kembali = new JButton("kembali");
+    JLabel hasil = new JLabel("Luas Bangun");
+    JLabel value = new JLabel("[Tipe data double]");
     Menu2D () {
         setVisible(true);
         setSize(720, 550);
@@ -43,8 +47,11 @@ public class Menu2D extends JFrame implements ActionListener {
         deskripsi.setFont(new Font("Arial", Font.ITALIC, 15));
         
         add(bangun);
-        bangun.setBounds(40, 100, 250, 35);
-        bangun.addActionListener(this);
+        bangun.setBounds(40, 100, 150, 35);
+        
+        add(pilih);
+        pilih.setBounds(200, 100, 100, 35);
+        pilih.addActionListener(this);
         
         add(param1);
         param1.setBounds(40, 150, 100, 35);
@@ -74,12 +81,49 @@ public class Menu2D extends JFrame implements ActionListener {
         add(kembali);
         kembali.setBounds(150, 285, 100, 30);
         kembali.addActionListener(this);
+        
+        add(hasil);
+        hasil.setBounds(40, 325, 100, 30);
+                
+        add(value);
+        value.setBounds(150, 325, 120, 30);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
-    }
-    
-    
+        if(e.getSource()==pilih){
+            if(bangun.getSelectedItem()=="Persegi"){
+                param1.setText("Sisi");
+                param2.setText("Not Used");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Persegi"){
+                param1.setText("Panjang");
+                param2.setText("Lebar");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Lingkaran"){
+                param1.setText("Jari Jari");
+                param2.setText("Not Used");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Segitiga"){
+                param1.setText("Alas");
+                param2.setText("Tinggi");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Jajar Genjang"){
+                param1.setText("Alas");
+                param2.setText("Tinggi");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Layang Layang"){
+                param1.setText("Diagonal Horizontal");
+                param2.setText("Diagonal Vertikal");
+                param3.setText("Not Used");
+            }
+        }else if(e.getSource()==hitung){
+            if(bangun.getSelectedItem()=="Persegi"){
+                Persegi b1 = new Persegi(Double.parseDouble(input1.getText()));
+                value.setText(String.valueOf(b1.luas()));
+            }
+        }else if(e.getSource()==kembali){
+            new MainMenu();
+        }
+    }   
 }
