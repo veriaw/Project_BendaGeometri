@@ -4,6 +4,7 @@
  */
 package bendaGeometri;
 
+import bangunRuang.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,6 +19,7 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
     JLabel welcome = new JLabel("Benda Geometri 3D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
     JComboBox bangun = new JComboBox(bangunRuang);
+    JButton pilih = new JButton("Pilih");
     JLabel param1 = new JLabel("Parameter 1");
     JLabel param2 = new JLabel("Parameter 2");
     JLabel param3 = new JLabel("Parameter 3");
@@ -26,6 +28,8 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
     JTextField input3 = new JTextField();
     JButton hitung = new JButton("Hitung");
     JButton kembali = new JButton("kembali");
+    JLabel hasil = new JLabel("Luas Bangun");
+    JLabel value = new JLabel("[Tipe data double]");
     public MenuGeometriRuang(){
         setVisible(true);
         setSize(720, 550);
@@ -43,7 +47,10 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
         
         add(bangun);
         bangun.setBounds(40, 100, 250, 35);
-        bangun.addActionListener(this);
+        
+        add(pilih);
+        pilih.setBounds(200, 100, 100, 35);
+        pilih.addActionListener(this);
         
         add(param1);
         param1.setBounds(40, 150, 100, 35);
@@ -73,11 +80,65 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
         add(kembali);
         kembali.setBounds(150, 285, 100, 30);
         kembali.addActionListener(this);
+        
+        add(hasil);
+        hasil.setBounds(40, 325, 100, 30);
+                
+        add(value);
+        value.setBounds(150, 325, 120, 30);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        if(e.getSource()==pilih){
+            if(bangun.getSelectedItem()=="Kubus"){
+                param1.setText("Sisi");
+                param2.setText("Not Used");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Balok"){
+                param1.setText("Panjang");
+                param2.setText("Lebar");
+                param3.setText("Tinggi");
+            }else if(bangun.getSelectedItem()=="Bola"){
+                param1.setText("Jari Jari");
+                param2.setText("Not Used");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Tabung"){
+                param1.setText("Jari Jari");
+                param2.setText("Tinggi");
+                param3.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Prisma"){
+                param1.setText("Alas");
+                param2.setText("Tinggi");
+                param3.setText("Tinggi Prisma");
+            }else if(bangun.getSelectedItem()=="Kerucut"){
+                param1.setText("Alas");
+                param2.setText("Tinggi");
+                param3.setText("Tinggi Kerucut");
+            }
+        }else if(e.getSource()==hitung){
+            if(bangun.getSelectedItem()=="Kubus"){
+                Kubus b1 = new Kubus(Double.parseDouble(input1.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Balok"){
+                Balok b1 = new Balok(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Bola"){
+                Bola b1 = new Bola(Double.parseDouble(input1.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Tabung"){
+                Tabung b1 = new Tabung(Double.parseDouble(input1.getText()), Double.parseDouble(input1.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Prisma"){
+                Prisma b1 = new Prisma(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Kerucut"){
+                Kerucut b1 = new Kerucut(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }
+        }else if(e.getSource()==kembali){
+            new MainMenu();
+        }
     }
     
     
