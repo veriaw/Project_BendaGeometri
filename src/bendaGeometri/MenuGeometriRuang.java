@@ -130,7 +130,7 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
                 Tabung b1 = new Tabung(Double.parseDouble(input1.getText()), Double.parseDouble(input1.getText()));
                 value.setText(String.valueOf(b1.volume()));
             }else if(bangun.getSelectedItem()=="Prisma"){
-                Prisma b1 = new Prisma(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                PrismaSegitiga b1 = new PrismaSegitiga(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
                 value.setText(String.valueOf(b1.volume()));
             }else if(bangun.getSelectedItem()=="Kerucut"){
                 Kerucut b1 = new Kerucut(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
