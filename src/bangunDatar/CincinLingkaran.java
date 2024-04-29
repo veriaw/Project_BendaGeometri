@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package bangunDatar;
 
 /**
  *
  * @author nana
  */
-package bangunDatar;
 
 import bendaGeometri.BendaGeometri;
 import bendaGeometri.GeometriDatar;
@@ -42,4 +42,3 @@ public class CincinLingkaran extends BendaGeometri implements GeometriDatar {
         return 2 * Math.PI * jari_jari * tinggi;
     }
 }
-

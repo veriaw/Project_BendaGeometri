@@ -4,19 +4,20 @@
  */
 package bangunRuang;
 
-import bangunDatar.Lingkaran;
-import bendaGeometri.GeometriRuang;
-
 /**
  *
- * @author Lenovo
+ * @author nana
  */
-public class Kerucut extends Lingkaran implements GeometriRuang {
+
+import bangunDatar.Trapesium;
+import bendaGeometri.GeometriRuang;
+
+public class KerucutTerpancung extends Trapesium implements GeometriRuang {
     private double tinggiKerucut;
-    
-    public Kerucut(double jari_jari, double tinggiKerucut){
-        super(jari_jari);
-        this.tinggiKerucut=tinggiKerucut;
+
+    public KerucutTerpancung(double alasAtas, double alasBawah, double tinggi, double tinggiKerucut) {
+        super(alasAtas, alasBawah, tinggi);
+        this.tinggiKerucut = tinggiKerucut;
     }
 
     public double getTinggiKerucut() {
@@ -27,12 +28,9 @@ public class Kerucut extends Lingkaran implements GeometriRuang {
         this.tinggiKerucut = tinggiKerucut;
     }
 
-    Lingkaran alas = new Lingkaran(jari_jari);    
-    
     @Override
     public double volume() {
-        return 0.333*alas.luas()*tinggiKerucut;
+        return (1.0 / 3.0) * luas() * tinggiKerucut;
     }
-    
-    
 }
+
