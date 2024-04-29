@@ -11,11 +11,11 @@ import bendaGeometri.GeometriDatar;
  *
  * @author adity
  */
-public class TemberengLingkaran extends BendaGeometri implements GeometriDatar {
+public class TemberengLingkaran extends Lingkaran implements GeometriDatar {
 
-    protected double jari_jari, derajat_sudut;
+    protected double derajat_sudut;
     public TemberengLingkaran(double jari_jari,double derajat_sudut ){
-        this.jari_jari=jari_jari;
+        super(jari_jari);
         this.derajat_sudut=derajat_sudut;
     }
 
@@ -35,9 +35,11 @@ public class TemberengLingkaran extends BendaGeometri implements GeometriDatar {
         this.derajat_sudut = derajat_sudut;
     }
     
+    Lingkaran b1 = new Lingkaran(jari_jari);
+    
     @Override
     public double luas() {
-         return (derajat_sudut/360 * Math.PI*Math.pow(jari_jari,2))-(0.5 * jari_jari*jari_jari);
+         return (derajat_sudut/360 * b1.luas())-(0.5 * jari_jari*jari_jari);
     }
     
 }

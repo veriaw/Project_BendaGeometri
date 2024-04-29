@@ -4,18 +4,18 @@
  */
 package bangunRuang;
 
-import bangunDatar.Segitiga;
+import bangunDatar.Lingkaran;
 import bendaGeometri.GeometriRuang;
 
 /**
  *
  * @author Lenovo
  */
-public class Kerucut extends Segitiga implements GeometriRuang {
+public class Kerucut extends Lingkaran implements GeometriRuang {
     private double tinggiKerucut;
     
-    public Kerucut(double alas, double tinggi, double tinggiKerucut){
-        super(alas, tinggi);
+    public Kerucut(double jari_jari, double tinggiKerucut){
+        super(jari_jari);
         this.tinggiKerucut=tinggiKerucut;
     }
 
@@ -27,11 +27,11 @@ public class Kerucut extends Segitiga implements GeometriRuang {
         this.tinggiKerucut = tinggiKerucut;
     }
 
-    Segitiga segi3 = new Segitiga(alas, tinggi);    
+    Lingkaran alas = new Lingkaran(jari_jari);    
     
     @Override
     public double volume() {
-        return 0.333*segi3.luas()*tinggiKerucut;
+        return 0.333*alas.luas()*tinggiKerucut;
     }
     
     

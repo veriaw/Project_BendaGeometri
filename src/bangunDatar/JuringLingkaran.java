@@ -11,20 +11,12 @@ import bendaGeometri.GeometriDatar;
  *
  * @author adity
  */
-public class JuringLingkaran extends BendaGeometri implements GeometriDatar {
+public class JuringLingkaran extends Lingkaran implements GeometriDatar {
 
-    protected double jari_jari, derajat_sudut;
+    protected double derajat_sudut;
     public JuringLingkaran(double jari_jari,double derajat_sudut){
-        this.jari_jari=jari_jari;
+        super(jari_jari);
         this.derajat_sudut=derajat_sudut;
-    }
-
-    public double getJari_jari() {
-        return jari_jari;
-    }
-
-    public void setJari_jari(double jari_jari) {
-        this.jari_jari = jari_jari;
     }
 
     public double getDerajat_sudut() {
@@ -35,9 +27,11 @@ public class JuringLingkaran extends BendaGeometri implements GeometriDatar {
         this.derajat_sudut = derajat_sudut;
     }
 
+    Lingkaran b1 = new Lingkaran(jari_jari);
+    
     @Override
     public double luas() {
-        return derajat_sudut/360 * Math.PI*Math.pow(jari_jari,2);
+        return derajat_sudut/360 * b1.luas();
     }
     
 }
