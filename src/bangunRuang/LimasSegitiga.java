@@ -13,7 +13,7 @@ import bendaGeometri.GeometriRuang;
 public class LimasSegitiga extends Segitiga implements GeometriRuang{
     private double tinggiLimasSegitiga;
     
-    public LimasSegitiga(double tinggi, double alas, double tinggiLimasSegitiga){
+    public LimasSegitiga(double alas, double tinggi, double tinggiLimasSegitiga){
         super(alas, tinggi);
         this.tinggiLimasSegitiga = tinggiLimasSegitiga;
     }

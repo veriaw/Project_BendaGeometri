@@ -19,14 +19,6 @@ public class TemberengLingkaran extends Lingkaran implements GeometriDatar {
         this.derajat_sudut=derajat_sudut;
     }
 
-    public double getJari_jari() {
-        return jari_jari;
-    }
-
-    public void setJari_jari(double jari_jari) {
-        this.jari_jari = jari_jari;
-    }
-
     public double getDerajat_sudut() {
         return derajat_sudut;
     }

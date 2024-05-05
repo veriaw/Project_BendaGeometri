@@ -4,41 +4,36 @@
  */
 package bangunDatar;
 
+import bendaGeometri.GeometriDatar;
+
 /**
  *
  * @author nana
  */
 
-import bendaGeometri.BendaGeometri;
-import bendaGeometri.GeometriDatar;
 
-public class CincinLingkaran extends BendaGeometri implements GeometriDatar {
-    protected double jari_jari, tinggi;
+public class CincinLingkaran extends Lingkaran implements GeometriDatar {
+    protected double jari_jariKecil;
 
-    public CincinLingkaran(double jari_jari, double tinggi) {
-        this.jari_jari = jari_jari;
-        this.tinggi = tinggi;
+    public CincinLingkaran(double jari_jari, double jari_jariKecil) {
+        super(jari_jari);
+        this.jari_jariKecil = jari_jariKecil;
     }
 
-    public double getJari_jari() {
-        return jari_jari;
+    public double getJari_jariKecil() {
+        return jari_jariKecil;
     }
 
-    public void setJari_jari(double jari_jari) {
-        this.jari_jari = jari_jari;
+    public void setJari_jariKecil(double jari_jariKecil) {
+        this.jari_jariKecil = jari_jariKecil;
     }
-
-    public double getTinggi() {
-        return tinggi;
-    }
-
-    public void setTinggi(double tinggi) {
-        this.tinggi = tinggi;
-    }
-
+    
+    Lingkaran besar = new Lingkaran(jari_jari);
+    Lingkaran kecil = new Lingkaran(jari_jariKecil);
+    
     @Override
     public double luas() {
         // Rumus luas permukaan cincin: 2 * π * r * t
-        return 2 * Math.PI * jari_jari * tinggi;
+        return besar.luas()-kecil.luas();
     }
 }

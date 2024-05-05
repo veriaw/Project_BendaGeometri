@@ -15,7 +15,7 @@ import javax.swing.*;
  * @author Lenovo
  */
 public class MenuGeometriRuang extends JFrame implements ActionListener {
-    final private String[] bangunRuang = {"Balok","Kubus","Prisma","Tabung","Kerucut","Bola"};
+    final private String[] bangunRuang = {"Balok","Kubus","Prisma","Tabung","Kerucut","Bola","Limas Persegi","Limas Persegi Panjang","Limas Segitiga","Kerucut Terpancung"};
     JLabel welcome = new JLabel("Benda Geometri 3D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
     JComboBox bangun = new JComboBox(bangunRuang);
@@ -23,9 +23,11 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
     JLabel param1 = new JLabel("Parameter 1");
     JLabel param2 = new JLabel("Parameter 2");
     JLabel param3 = new JLabel("Parameter 3");
+    JLabel param4 = new JLabel("Parameter 4");
     JTextField input1 = new JTextField();
     JTextField input2 = new JTextField();
     JTextField input3 = new JTextField();
+    JTextField input4 = new JTextField();
     JButton hitung = new JButton("Hitung");
     JButton kembali = new JButton("kembali");
     JLabel hasil = new JLabel("Luas Bangun");
@@ -46,7 +48,7 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
         deskripsi.setFont(new Font("Arial", Font.ITALIC, 15));
         
         add(bangun);
-        bangun.setBounds(40, 100, 250, 35);
+        bangun.setBounds(40, 100, 150, 35);
         
         add(pilih);
         pilih.setBounds(200, 100, 100, 35);
@@ -73,19 +75,26 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
         add(input3);
         input3.setBounds(150, 240, 100, 30);
         
+        add(param4);
+        param4.setBounds(40, 285, 100, 35);
+        param4.setFont(new Font("Arial", Font.PLAIN, 12));
+        
+        add(input4);
+        input4.setBounds(150, 285, 100, 30);
+        
         add(hitung);
-        hitung.setBounds(40, 285, 100, 30);
+        hitung.setBounds(40, 325, 100, 30);
         hitung.addActionListener(this);
         
         add(kembali);
-        kembali.setBounds(150, 285, 100, 30);
+        kembali.setBounds(150, 325, 100, 30);
         kembali.addActionListener(this);
         
         add(hasil);
-        hasil.setBounds(40, 325, 100, 30);
+        hasil.setBounds(40, 365, 100, 30);
                 
         add(value);
-        value.setBounds(150, 325, 120, 30);
+        value.setBounds(150, 365, 120, 30);
     }
 
     @Override
@@ -95,26 +104,52 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
                 param1.setText("Sisi");
                 param2.setText("Not Used");
                 param3.setText("Not Used");
+                param4.setText("Not Used");
             }else if(bangun.getSelectedItem()=="Balok"){
                 param1.setText("Panjang");
                 param2.setText("Lebar");
                 param3.setText("Tinggi");
+                param4.setText("Not Used");
             }else if(bangun.getSelectedItem()=="Bola"){
                 param1.setText("Jari Jari");
                 param2.setText("Not Used");
                 param3.setText("Not Used");
+                param4.setText("Not Used");
             }else if(bangun.getSelectedItem()=="Tabung"){
                 param1.setText("Jari Jari");
                 param2.setText("Tinggi");
                 param3.setText("Not Used");
+                param4.setText("Not Used");
             }else if(bangun.getSelectedItem()=="Prisma"){
                 param1.setText("Alas");
                 param2.setText("Tinggi");
                 param3.setText("Tinggi Prisma");
+                param4.setText("Not Used");
             }else if(bangun.getSelectedItem()=="Kerucut"){
                 param1.setText("Jari Jari");
                 param2.setText("Tinggi Kerucut");
                 param3.setText("Not Used");
+                param4.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Limas Persegi"){
+                param1.setText("Panjang");
+                param2.setText("Tinggi Limas");
+                param3.setText("Not Used");
+                param4.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Limas Persegi Panjang"){
+                param1.setText("Panjang");
+                param2.setText("Lebar");
+                param3.setText("Tinggi Limas");
+                param4.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Limas Segitiga"){
+                param1.setText("Alas");
+                param2.setText("Tinggi");
+                param3.setText("Tinggi Limas");
+                param4.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Kerucut Terpancung"){
+                param1.setText("Alas Atas");
+                param2.setText("Alas Bawah");
+                param3.setText("Tinggi");
+                param4.setText("Tinggi Kerucut");
             }
         }else if(e.getSource()==hitung){
             if(bangun.getSelectedItem()=="Kubus"){
@@ -130,10 +165,22 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
                 Tabung b1 = new Tabung(Double.parseDouble(input1.getText()), Double.parseDouble(input1.getText()));
                 value.setText(String.valueOf(b1.volume()));
             }else if(bangun.getSelectedItem()=="Prisma"){
-                Prisma b1 = new Prisma(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                PrismaSegitiga b1 = new PrismaSegitiga(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
                 value.setText(String.valueOf(b1.volume()));
             }else if(bangun.getSelectedItem()=="Kerucut"){
                 Kerucut b1 = new Kerucut(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Limas Persegi"){
+                LimasPersegi b1 = new LimasPersegi(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Limas Persegi Panjang"){
+                LimasPersegiPanjang b1 = new LimasPersegiPanjang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Limas Segitiga"){
+                LimasSegitiga b1 = new LimasSegitiga(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                value.setText(String.valueOf(b1.volume()));
+            }else if(bangun.getSelectedItem()=="Kerucut Terpancung"){
+                KerucutTerpancung b1 = new KerucutTerpancung(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()), Double.parseDouble(input4.getText()));
                 value.setText(String.valueOf(b1.volume()));
             }
         }else if(e.getSource()==kembali){
