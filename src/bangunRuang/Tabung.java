@@ -27,11 +27,9 @@ public class Tabung extends Lingkaran implements GeometriRuang {
         this.tinggi = tinggi;
     }
     
-    Lingkaran alas = new Lingkaran(jari_jari);
-    
     @Override
     public double volume() {
-        return alas.luas()*tinggi;
+        return super.luas()*tinggi;
     }
     
 }

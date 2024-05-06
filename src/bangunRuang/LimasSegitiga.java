@@ -24,11 +24,9 @@ public class LimasSegitiga extends Segitiga implements GeometriRuang{
         this.tinggiLimasSegitiga = tinggiLimasSegitiga;
     }
     
-    Segitiga segi3 = new Segitiga(alas, tinggi);
-    
     @Override
     public double volume(){
-        return 0.33*segi3.luas()*tinggiLimasSegitiga;
+        return 0.33*super.luas()*tinggiLimasSegitiga;
     
     }
 }

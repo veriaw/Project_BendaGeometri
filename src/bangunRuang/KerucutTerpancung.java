@@ -9,28 +9,29 @@ package bangunRuang;
  * @author nana
  */
 
-import bangunDatar.Trapesium;
 import bendaGeometri.GeometriRuang;
 
-public class KerucutTerpancung extends Trapesium implements GeometriRuang {
-    private double tinggiKerucut;
+public class KerucutTerpancung extends Kerucut implements GeometriRuang {
+    private double tinggiKerucutTerpancung;
 
-    public KerucutTerpancung(double alasAtas, double alasBawah, double tinggi, double tinggiKerucut) {
-        super(alasAtas, alasBawah, tinggi);
+    public KerucutTerpancung(double jari_jari, double tinggiKerucut ,double tinggiKerucutTerpancung) {
+        super(jari_jari, tinggiKerucut);
         this.tinggiKerucut = tinggiKerucut;
     }
 
-    public double getTinggiKerucut() {
-        return tinggiKerucut;
+    public double getTinggiKerucutTerpancung() {
+        return tinggiKerucutTerpancung;
     }
 
-    public void setTinggiKerucut(double tinggiKerucut) {
-        this.tinggiKerucut = tinggiKerucut;
+    public void setTinggiKerucutTerpancung(double tinggiKerucutTerpancung) {
+        this.tinggiKerucutTerpancung = tinggiKerucutTerpancung;
     }
 
     @Override
     public double volume() {
-        return (1.0 / 3.0) * luas() * tinggiKerucut;
+        double volumeKerucut = super.volume();
+        double volumeKerucutTerpancung = (1.0 / 3.0) * Math.PI* Math.pow(jari_jari, 2) * tinggiKerucutTerpancung;
+        return volumeKerucut-volumeKerucutTerpancung;
     }
 }
 

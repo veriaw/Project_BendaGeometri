@@ -24,10 +24,8 @@ public class LimasPersegi extends Persegi implements GeometriRuang{
         this.tinggiLimasPersegi = tinggiLimasPersegi;
     }
     
-    Persegi alasPersegi = new Persegi(panjang);
-    
     @Override
     public double volume(){
-        return 0.33*alasPersegi.luas()*tinggiLimasPersegi;
+        return 0.33*super.luas()*tinggiLimasPersegi;
     }
 }

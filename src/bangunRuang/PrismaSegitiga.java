@@ -27,10 +27,8 @@ public class PrismaSegitiga extends Segitiga implements GeometriRuang {
         this.tinggiPrismaSegitiga = tinggiPrismaSegitiga;
     }
     
-    Segitiga segi3 = new Segitiga(alas, tinggi);
-    
     @Override
     public double volume() {
-        return segi3.luas()*tinggiPrismaSegitiga;
+        return super.luas()*tinggiPrismaSegitiga;
     }
 }
