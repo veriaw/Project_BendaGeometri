@@ -30,7 +30,7 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
     JTextField input4 = new JTextField();
     JButton hitung = new JButton("Hitung");
     JButton kembali = new JButton("kembali");
-    JLabel hasil = new JLabel("Luas Bangun");
+    JLabel hasil = new JLabel("Volume Bangun");
     JLabel value = new JLabel("[Tipe data double]");
     public MenuGeometriRuang(){
         setVisible(true);
