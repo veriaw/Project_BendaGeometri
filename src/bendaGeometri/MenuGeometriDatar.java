@@ -168,7 +168,7 @@ public class MenuGeometriDatar extends JFrame implements ActionListener {
             }else if(bangun.getSelectedItem()=="Tembereng Lingkaran"){
                 TemberengLingkaran b1 = new TemberengLingkaran(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
                 value.setText(String.valueOf(b1.luas()));
-            }else if(bangun.getSelectedItem()=="Tembereng Lingkaran"){
+            }else if(bangun.getSelectedItem()=="Cincin Lingkaran"){
                 CincinLingkaran b1 = new CincinLingkaran(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
                 value.setText(String.valueOf(b1.luas()));
             }

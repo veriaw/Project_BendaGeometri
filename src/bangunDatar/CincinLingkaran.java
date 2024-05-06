@@ -33,7 +33,6 @@ public class CincinLingkaran extends Lingkaran implements GeometriDatar {
     
     @Override
     public double luas() {
-        // Rumus luas permukaan cincin: 2 * π * r * t
         return besar.luas()-kecil.luas();
     }
 }
