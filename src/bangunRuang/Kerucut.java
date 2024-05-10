@@ -31,6 +31,6 @@ public class Kerucut extends Lingkaran implements GeometriRuang {
     public double volume() {
         return 0.333*super.luas()*tinggiKerucut;
     }
-    
+   
     
 }

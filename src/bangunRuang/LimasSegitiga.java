@@ -29,4 +29,9 @@ public class LimasSegitiga extends Segitiga implements GeometriRuang{
         return 0.33*super.luas()*tinggiLimasSegitiga;
     
     }
+    @Override
+    public double luasPermukaan() {
+        return (super.luas())+(4*(0.50*alas*tinggiLimasSegitiga));
+    
+    }
 }

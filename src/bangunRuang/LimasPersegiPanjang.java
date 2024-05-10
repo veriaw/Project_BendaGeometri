@@ -27,5 +27,9 @@ public class LimasPersegiPanjang extends PersegiPanjang implements GeometriRuang
     public double volume(){
         return 0.33*super.luas()*tinggiLimasPersegiPanjang;
     }
+    @Override
+    public double luasPermukaan() {
+        return (super.luas())+(4*(0.50*panjang*tinggiLimasPersegiPanjang));
     
+    }
 }

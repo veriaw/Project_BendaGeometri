@@ -37,5 +37,8 @@ public class PersegiPanjang extends BendaGeometri implements GeometriDatar{
     public double luas() {
         return panjang*lebar;
     }
-    
+    @Override
+    public double keliling() {
+        return 2 * (panjang+lebar);
+    }
 }

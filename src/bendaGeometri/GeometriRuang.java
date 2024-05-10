@@ -10,4 +10,5 @@ package bendaGeometri;
  */
 public interface GeometriRuang {
     public double volume();
+    public double luasPermukaan();
 }

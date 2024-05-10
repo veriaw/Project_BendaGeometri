@@ -31,5 +31,9 @@ public class Tabung extends Lingkaran implements GeometriRuang {
     public double volume() {
         return super.luas()*tinggi;
     }
-    
+    @Override
+    public double luasPermukaan() {
+        return 2*(Math.PI*Math.pow(jari_jari,1))*(jari_jari+tinggi);
+    }
+
 }

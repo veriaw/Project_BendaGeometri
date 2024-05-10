@@ -10,4 +10,5 @@ package bendaGeometri;
  */
 public interface GeometriDatar {
     public double luas();
+    public double keliling();
 }

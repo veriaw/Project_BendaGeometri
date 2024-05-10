@@ -31,5 +31,9 @@ public class Balok extends PersegiPanjang implements GeometriRuang {
     public double volume() {
         return super.luas()*tinggi;
     }
+    @Override
+    public double luasPermukaan() {
+        return (2*super.luas())+(panjang*tinggi)+(lebar*tinggi);
+    }
     
 }

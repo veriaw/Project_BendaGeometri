@@ -39,7 +39,11 @@ public class JajarGenjang extends BendaGeometri implements GeometriDatar {
     public double luas() {
         return alas*tinggi;
     }
-    
-    
-    
+    @Override
+    public double keliling(double b) {
+        return (2 * (alas + sisiMiring(b)));
+    }
+    public double sisiMiring(double b) {
+        return b;
+    }    
 }

@@ -39,6 +39,13 @@ public class LayangLayang extends BendaGeometri implements GeometriDatar {
     public double luas() {
         return 0.5*diagonalVertikal*diagonalHorizontal;
     }
+    @Override
+    public double keliling() {
+        return (4 * sisiMiring(diagonalHorizontal, diagonalVertikal));
+    }
+    public double sisiMiring(double d1, double d2) {
+        return (Math.sqrt(((diagonalHorizontal / 2) * (diagonalHorizontal / 2)) + ((diagonalVertikal / 2) * (diagonalVertikal / 2))));
+    }   
     
     
 }
