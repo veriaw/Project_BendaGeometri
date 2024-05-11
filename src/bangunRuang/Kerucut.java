@@ -12,12 +12,11 @@ import bendaGeometri.GeometriRuang;
  * @author Lenovo
  */
 public class Kerucut extends Lingkaran implements GeometriRuang {
-    protected double tinggiKerucut, sisimiring;
+    protected double tinggiKerucut;
     
-    public Kerucut(double jari_jari, double tinggiKerucut, double sisimiring){
+    public Kerucut(double jari_jari, double tinggiKerucut){
         super(jari_jari);
         this.tinggiKerucut=tinggiKerucut;
-        this.sisimiring=sisimiring;
         
     }
     
@@ -29,14 +28,6 @@ public class Kerucut extends Lingkaran implements GeometriRuang {
         this.tinggiKerucut = tinggiKerucut;
     }   
     
-    public double getSisimiring(){
-        return sisimiring;
-    }
-    
-    public void setSisimiring(double sisimiring){
-        this.sisimiring = sisimiring;
-    }
-    
     @Override
     public double volume() {
         return 0.333*super.luas()*tinggiKerucut;
@@ -44,8 +35,7 @@ public class Kerucut extends Lingkaran implements GeometriRuang {
     
     @Override
     public double luasPermukaan(){
-        return r*Math.PI*Math.pow(sisimiring+r);
-    }
-   
-    
+        double sisiMiring = Math.sqrt(Math.pow(super.getJari_jari(), 2) + Math.pow(tinggiKerucut, 2));
+        return super.luas() + Math.PI * super.getJari_jari() * sisiMiring;
+    }   
 }

@@ -37,6 +37,9 @@ public class Segitiga extends BendaGeometri implements GeometriDatar {
     public double luas() {
         return 0.5*alas*tinggi;
     }
-    
+    public double keliling() {
+        double sisiMiring = Math.sqrt(Math.pow(alas / 2, 2) + Math.pow(tinggi, 2));
+        return alas + 2 * sisiMiring;
+    }
     
 }

@@ -29,9 +29,13 @@ public class KerucutTerpancung extends Kerucut implements GeometriRuang {
 
     @Override
     public double volume() {
-        double volumeKerucut = super.volume();
         double volumeKerucutTerpancung = (1.0 / 3.0) * Math.PI* Math.pow(jari_jari, 2) * tinggiKerucutTerpancung;
-        return volumeKerucut-volumeKerucutTerpancung;
+        return super.volume()-volumeKerucutTerpancung;
+    }
+    public double luasPermukaan(){
+        double sisiMiring = Math.sqrt(Math.pow(getJari_jari() - getJari_jari() * tinggiKerucutTerpancung / getTinggiKerucut(), 2) + Math.pow(tinggiKerucutTerpancung, 2));
+        double luasKerucutTerpancung = Math.PI * (getJari_jari() + getJari_jari() * sisiMiring);
+        return super.luasPermukaan() + luasKerucutTerpancung;
     }
 }
 
