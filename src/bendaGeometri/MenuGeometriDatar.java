@@ -28,8 +28,10 @@ public class MenuGeometriDatar extends JFrame implements ActionListener {
     JTextField input3 = new JTextField();
     JButton hitung = new JButton("Hitung");
     JButton kembali = new JButton("kembali");
-    JLabel hasil = new JLabel("Luas Bangun");
-    JLabel value = new JLabel("[Tipe data double]");
+    JLabel hasilLuas = new JLabel("Luas Bangun");
+    JLabel valueLuas = new JLabel("[Tipe data double]");
+    JLabel hasilKeliling = new JLabel("Keliling Bangun");
+    JLabel valueKeliling = new JLabel("[Tipe data double]");
     MenuGeometriDatar () {
         setVisible(true);
         setSize(720, 550);
@@ -82,11 +84,17 @@ public class MenuGeometriDatar extends JFrame implements ActionListener {
         kembali.setBounds(150, 285, 100, 30);
         kembali.addActionListener(this);
         
-        add(hasil);
-        hasil.setBounds(40, 325, 100, 30);
+        add(hasilLuas);
+        hasilLuas.setBounds(40, 325, 100, 30);
                 
-        add(value);
-        value.setBounds(150, 325, 120, 30);
+        add(valueLuas);
+        valueLuas.setBounds(150, 325, 120, 30);
+        
+        add(hasilKeliling);
+        hasilKeliling.setBounds(40, 365, 100, 30);
+        
+        add(valueKeliling);
+        valueKeliling.setBounds(150, 365, 120, 30);
     }
 
     @Override
@@ -140,37 +148,36 @@ public class MenuGeometriDatar extends JFrame implements ActionListener {
         }else if(e.getSource()==hitung){
             if(bangun.getSelectedItem()=="Persegi"){
                 Persegi b1 = new Persegi(Double.parseDouble(input1.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }else if(bangun.getSelectedItem()=="Persegi Panjang"){
                 PersegiPanjang b1 = new PersegiPanjang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }else if(bangun.getSelectedItem()=="Lingkaran"){
                 Lingkaran b1 = new Lingkaran(Double.parseDouble(input1.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }else if(bangun.getSelectedItem()=="Segitiga"){
                 Segitiga b1 = new Segitiga(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }else if(bangun.getSelectedItem()=="Jajar Genjang"){
                 JajarGenjang b1 = new JajarGenjang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }else if(bangun.getSelectedItem()=="Trapesium"){
                 Trapesium b1 = new Trapesium(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }else if(bangun.getSelectedItem()=="Layang Layang"){
                 LayangLayang b1 = new LayangLayang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }else if(bangun.getSelectedItem()=="Belah Ketupat"){
                 BelahKetupat b1 = new BelahKetupat(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
-            }else if(bangun.getSelectedItem()=="Juring Lingkaran"){
-                JuringLingkaran b1 = new JuringLingkaran(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
-            }else if(bangun.getSelectedItem()=="Tembereng Lingkaran"){
-                TemberengLingkaran b1 = new TemberengLingkaran(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
-            }else if(bangun.getSelectedItem()=="Cincin Lingkaran"){
-                CincinLingkaran b1 = new CincinLingkaran(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                value.setText(String.valueOf(b1.luas()));
+                valueLuas.setText(String.valueOf(b1.luas()));
+                valueKeliling.setText(String.valueOf(b1.keliling()));
             }
         }else if(e.getSource()==kembali){
             new MainMenu();

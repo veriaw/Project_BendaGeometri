@@ -46,6 +46,8 @@ protected double atas, bawah, tinggi;
     public double luas() {
         return 0.5 * (atas+bawah) * tinggi;
     }
+    
+    @Override
     public double keliling() {
         double sisiMiring = Math.sqrt(Math.pow((bawah - atas) / 2, 2) + Math.pow(tinggi, 2));
         return atas + bawah + 2 * sisiMiring;
