@@ -12,9 +12,9 @@ import bendaGeometri.GeometriRuang;
  * @author nana
  */
 public class JuringBola extends Bola implements GeometriRuang {
-    private int jumlahSisi;
+    private double jumlahSisi;
 
-    public JuringBola(double jariJari, int jumlahSisi) {
+    public JuringBola(double jariJari, double jumlahSisi) {
         super(jariJari);
         this.jumlahSisi = jumlahSisi;
     }

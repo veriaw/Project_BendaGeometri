@@ -15,7 +15,7 @@ import javax.swing.*;
  * @author Lenovo
  */
 public class MenuGeometriRuang extends JFrame implements ActionListener {
-    final private String[] bangunRuang = {"Balok","Kubus","Prisma","Tabung","Kerucut","Bola","Limas Persegi","Limas Persegi Panjang","Limas Segitiga","Kerucut Terpancung"};
+    final private String[] bangunRuang = {"Balok","Kubus","Prisma","Tabung","Kerucut","Bola","Limas Persegi","Limas Persegi Panjang","Limas Segitiga","Kerucut Terpancung","Juring Bola","Tembereng Bola","Cincin Bola"};
     JLabel welcome = new JLabel("Benda Geometri 3D");
     JLabel deskripsi = new JLabel("Pilih Bangun Datar Terlebih Dahulu");
     JComboBox bangun = new JComboBox(bangunRuang);
@@ -158,6 +158,21 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
                 param2.setText("Tinggi Kerucut");
                 param3.setText("Tinggi Kerucut Terpancung");
                 param4.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Juring Bola"){
+                param1.setText("Jari Jari");
+                param2.setText("Jumlah Sisi");
+                param3.setText("Not Used");
+                param4.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Tembereng Bola"){
+                param1.setText("Jari Jari");
+                param2.setText("Sudut Tembereng");
+                param3.setText("Not Used");
+                param4.setText("Not Used");
+            }else if(bangun.getSelectedItem()=="Cincin Bola"){
+                param1.setText("Jari Jari");
+                param2.setText("Jumlah Sisi");
+                param3.setText("Not Used");
+                param4.setText("Not Used");
             }
         }else if(e.getSource()==hitung){
             if(bangun.getSelectedItem()=="Kubus"){
@@ -198,6 +213,18 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
                 valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
             }else if(bangun.getSelectedItem()=="Kerucut Terpancung"){
                 KerucutTerpancung b1 = new KerucutTerpancung(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
+                valueVolume.setText(String.valueOf(b1.volume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+            }else if(bangun.getSelectedItem()=="Juring Bola"){
+                JuringBola b1 = new JuringBola(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
+                valueVolume.setText(String.valueOf(b1.volume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+            }else if(bangun.getSelectedItem()=="Tembereng Bola"){
+                TemberengBola b1 = new TemberengBola(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
+                valueVolume.setText(String.valueOf(b1.volume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+            }else if(bangun.getSelectedItem()=="Cincin Bola"){
+                CincinBola b1 = new CincinBola(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
                 valueVolume.setText(String.valueOf(b1.volume()));
                 valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
             }
