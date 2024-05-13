@@ -35,11 +35,11 @@ public class BelahKetupat extends BendaGeometri implements GeometriDatar {
     }
     
     @Override
-    public double luas() {
+    public double hitungLuas() {
         return 0.5 * diagonalHorizontal * diagonalVertikal;
     }
     @Override
-    public double keliling() {
+    public double hitungKeliling() {
         return 4 * Math.sqrt(0.25 * Math.pow(diagonalHorizontal, 2) + 0.25 * Math.pow(diagonalVertikal, 2));
     }
 }    

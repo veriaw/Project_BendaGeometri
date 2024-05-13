@@ -9,6 +9,6 @@ package bendaGeometri;
  * @author Lenovo
  */
 public interface GeometriRuang {
-    public double volume();
-    public double luasPermukaan();
+    public double hitungVolume();
+    public double hitungLuasPermukaan();
 }

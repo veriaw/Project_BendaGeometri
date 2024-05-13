@@ -20,12 +20,12 @@ public class JuringBola extends Bola implements GeometriRuang {
     }
 
     @Override
-    public double volume() {
-        return super.volume() * (4.0 / 3.0) * Math.PI * jumlahSisi;
+    public double hitungVolume() {
+        return super.hitungVolume() * (4.0 / 3.0) * Math.PI * jumlahSisi;
     }
 
     @Override
-    public double luasPermukaan() {
+    public double hitungLuasPermukaan() {
     return 4 * Math.PI * jari_jari * jari_jari + jumlahSisi * 2 * Math.PI * jari_jari * Math.sin(Math.PI / jumlahSisi);
     }
 }

@@ -9,6 +9,6 @@ package bendaGeometri;
  * @author Lenovo
  */
 public interface GeometriDatar {
-    public double luas();
-    public double keliling();
+    public double hitungLuas();
+    public double hitungKeliling();
 }

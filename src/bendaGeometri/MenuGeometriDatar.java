@@ -148,36 +148,36 @@ public class MenuGeometriDatar extends JFrame implements ActionListener {
         }else if(e.getSource()==hitung){
             if(bangun.getSelectedItem()=="Persegi"){
                 Persegi b1 = new Persegi(Double.parseDouble(input1.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }else if(bangun.getSelectedItem()=="Persegi Panjang"){
                 PersegiPanjang b1 = new PersegiPanjang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }else if(bangun.getSelectedItem()=="Lingkaran"){
                 Lingkaran b1 = new Lingkaran(Double.parseDouble(input1.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }else if(bangun.getSelectedItem()=="Segitiga"){
                 Segitiga b1 = new Segitiga(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }else if(bangun.getSelectedItem()=="Jajar Genjang"){
                 JajarGenjang b1 = new JajarGenjang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }else if(bangun.getSelectedItem()=="Trapesium"){
                 Trapesium b1 = new Trapesium(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }else if(bangun.getSelectedItem()=="Layang Layang"){
                 LayangLayang b1 = new LayangLayang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }else if(bangun.getSelectedItem()=="Belah Ketupat"){
                 BelahKetupat b1 = new BelahKetupat(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueLuas.setText(String.valueOf(b1.luas()));
-                valueKeliling.setText(String.valueOf(b1.keliling()));
+                valueLuas.setText(String.valueOf(b1.hitungLuas()));
+                valueKeliling.setText(String.valueOf(b1.hitungKeliling()));
             }
         }else if(e.getSource()==kembali){
             new MainMenu();

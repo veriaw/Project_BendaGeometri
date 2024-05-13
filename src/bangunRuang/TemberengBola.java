@@ -19,12 +19,12 @@ public class TemberengBola extends Bola implements GeometriRuang {
     }
 
     @Override
-    public double volume() {
-        return sudutTembereng/360*super.volume();
+    public double hitungVolume() {
+        return sudutTembereng/360*super.hitungVolume();
     }
 
     @Override
-    public double luasPermukaan() {
+    public double hitungLuasPermukaan() {
         return sudutTembereng/360*Math.PI*Math.pow(jari_jari, 2);
     }
 }

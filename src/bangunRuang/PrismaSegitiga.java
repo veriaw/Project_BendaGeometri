@@ -28,11 +28,11 @@ public class PrismaSegitiga extends Segitiga implements GeometriRuang {
     }
     
     @Override
-    public double volume() {
-        return super.luas()*tinggiPrismaSegitiga;
+    public double hitungVolume() {
+        return super.hitungLuas()*tinggiPrismaSegitiga;
     }
     @Override
-    public double luasPermukaan() {
-        return (2 * super.luas()) + (super.keliling()* tinggiPrismaSegitiga);
+    public double hitungLuasPermukaan() {
+        return (2 * super.hitungLuas()) + (super.hitungKeliling()* tinggiPrismaSegitiga);
     }
 }

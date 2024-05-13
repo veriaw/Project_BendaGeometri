@@ -18,11 +18,11 @@ public class Kubus extends Persegi implements GeometriRuang  {
     }
     Persegi alas = new Persegi(panjang);
     @Override
-    public double volume() {
-        return super.luas()*panjang;
+    public double hitungVolume() {
+        return super.hitungLuas()*panjang;
     }
     @Override
-    public double luasPermukaan() {
+    public double hitungLuasPermukaan() {
         return 6*(panjang*panjang);
     }
 }

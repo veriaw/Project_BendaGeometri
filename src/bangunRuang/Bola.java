@@ -17,11 +17,11 @@ public class Bola extends Lingkaran implements GeometriRuang {
     }
 
     @Override
-    public double volume() {
+    public double hitungVolume() {
         return 1.3333*Math.PI*Math.pow(jari_jari,3);
     }
     @Override
-    public double luasPermukaan() {
+    public double hitungLuasPermukaan() {
         return 4*(Math.PI*Math.pow(jari_jari,2));
     }
 

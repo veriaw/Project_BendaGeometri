@@ -28,12 +28,13 @@ public class Balok extends PersegiPanjang implements GeometriRuang {
     }
     
     @Override
-    public double volume() {
-        return super.luas()*tinggi;
+    public double hitungVolume() {
+        return super.hitungLuas()*tinggi;
     }
+    
     @Override
-    public double luasPermukaan() {
-        return (2*super.luas())+(panjang*tinggi)+(lebar*tinggi);
+    public double hitungLuasPermukaan() {
+        return (2*super.hitungLuas())+(panjang*tinggi)+(lebar*tinggi);
     }
     
 }

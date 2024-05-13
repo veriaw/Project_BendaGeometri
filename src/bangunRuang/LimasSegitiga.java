@@ -25,13 +25,13 @@ public class LimasSegitiga extends Segitiga implements GeometriRuang{
     }
     
     @Override
-    public double volume(){
-        return 0.33*super.luas()*tinggiLimasSegitiga;
+    public double hitungVolume(){
+        return 0.33*super.hitungLuas()*tinggiLimasSegitiga;
     
     }
     @Override
-    public double luasPermukaan() {
-        return (super.luas())+(4*(0.50*alas*tinggiLimasSegitiga));
+    public double hitungLuasPermukaan() {
+        return (super.hitungLuas())+(4*(0.50*alas*tinggiLimasSegitiga));
     
     }
 }

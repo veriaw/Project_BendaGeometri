@@ -34,11 +34,11 @@ public class PersegiPanjang extends BendaGeometri implements GeometriDatar{
     }
 
     @Override
-    public double luas() {
+    public double hitungLuas() {
         return panjang*lebar;
     }
     @Override
-    public double keliling() {
+    public double hitungKeliling() {
         return 2 * (panjang+lebar);
     }
 }

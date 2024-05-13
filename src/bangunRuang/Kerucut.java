@@ -29,13 +29,13 @@ public class Kerucut extends Lingkaran implements GeometriRuang {
     }   
     
     @Override
-    public double volume() {
-        return 0.333*super.luas()*tinggiKerucut;
+    public double hitungVolume() {
+        return 0.333*super.hitungLuas()*tinggiKerucut;
     }
     
     @Override
-    public double luasPermukaan(){
+    public double hitungLuasPermukaan(){
         double sisiMiring = Math.sqrt(Math.pow(super.getJari_jari(), 2) + Math.pow(tinggiKerucut, 2));
-        return super.luas() + Math.PI * super.getJari_jari() * sisiMiring;
+        return super.hitungLuas() + Math.PI * super.getJari_jari() * sisiMiring;
     }   
 }

@@ -43,12 +43,12 @@ protected double atas, bawah, tinggi;
         this.tinggi = tinggi;
     }
     @Override
-    public double luas() {
+    public double hitungLuas() {
         return 0.5 * (atas+bawah) * tinggi;
     }
     
     @Override
-    public double keliling() {
+    public double hitungKeliling() {
         double sisiMiring = Math.sqrt(Math.pow((bawah - atas) / 2, 2) + Math.pow(tinggi, 2));
         return atas + bawah + 2 * sisiMiring;
     }

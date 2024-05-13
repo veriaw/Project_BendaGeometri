@@ -27,12 +27,12 @@ public class Lingkaran extends BendaGeometri implements GeometriDatar{
 
     
     @Override
-    public double luas() {
+    public double hitungLuas() {
         return Math.PI*Math.pow(jari_jari,2);
     }
     
     @Override
-    public double keliling() {
+    public double hitungKeliling() {
         return 2*Math.PI*Math.pow(jari_jari,1);
     }
 }

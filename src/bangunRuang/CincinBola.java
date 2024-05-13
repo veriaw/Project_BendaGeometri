@@ -21,12 +21,12 @@ public class CincinBola extends Bola implements GeometriRuang {
     }
 
     @Override
-    public double volume() {
-        return super.volume() * (jariJariLuar * jariJariLuar - jariJariDalam * jariJariDalam);
+    public double hitungVolume() {
+        return super.hitungVolume() * (jariJariLuar * jariJariLuar - jariJariDalam * jariJariDalam);
     }
 
     @Override
-    public double luasPermukaan() {
+    public double hitungLuasPermukaan() {
         return 2 * Math.PI * jariJariLuar * (jariJariLuar + jariJariDalam);
     }
 }

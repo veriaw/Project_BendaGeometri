@@ -177,56 +177,56 @@ public class MenuGeometriRuang extends JFrame implements ActionListener {
         }else if(e.getSource()==hitung){
             if(bangun.getSelectedItem()=="Kubus"){
                 Kubus b1 = new Kubus(Double.parseDouble(input1.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Balok"){
                 Balok b1 = new Balok(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Bola"){
                 Bola b1 = new Bola(Double.parseDouble(input1.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Tabung"){
                 Tabung b1 = new Tabung(Double.parseDouble(input1.getText()), Double.parseDouble(input1.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Prisma"){
                 PrismaSegitiga b1 = new PrismaSegitiga(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Kerucut"){
                 Kerucut b1 = new Kerucut(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Limas Persegi"){
                 LimasPersegi b1 = new LimasPersegi(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Limas Persegi Panjang"){
                 LimasPersegiPanjang b1 = new LimasPersegiPanjang(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Limas Segitiga"){
                 LimasSegitiga b1 = new LimasSegitiga(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Kerucut Terpancung"){
                 KerucutTerpancung b1 = new KerucutTerpancung(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()), Double.parseDouble(input3.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Juring Bola"){
                 JuringBola b1 = new JuringBola(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Tembereng Bola"){
                 TemberengBola b1 = new TemberengBola(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }else if(bangun.getSelectedItem()=="Cincin Bola"){
                 CincinBola b1 = new CincinBola(Double.parseDouble(input1.getText()), Double.parseDouble(input2.getText()));
-                valueVolume.setText(String.valueOf(b1.volume()));
-                valueLuasPermukaan.setText(String.valueOf(b1.luasPermukaan()));
+                valueVolume.setText(String.valueOf(b1.hitungVolume()));
+                valueLuasPermukaan.setText(String.valueOf(b1.hitungLuasPermukaan()));
             }
         }else if(e.getSource()==kembali){
             new MainMenu();

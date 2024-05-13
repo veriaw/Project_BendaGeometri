@@ -28,11 +28,11 @@ public class Tabung extends Lingkaran implements GeometriRuang {
     }
     
     @Override
-    public double volume() {
-        return super.luas()*tinggi;
+    public double hitungVolume() {
+        return super.hitungLuas()*tinggi;
     }
     @Override
-    public double luasPermukaan() {
+    public double hitungLuasPermukaan() {
         return 2*(Math.PI*Math.pow(jari_jari,1))*(jari_jari+tinggi);
     }
 

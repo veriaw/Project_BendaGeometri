@@ -36,12 +36,12 @@ public class JajarGenjang extends BendaGeometri implements GeometriDatar {
     }
 
     @Override
-    public double luas() {
+    public double hitungLuas() {
         return alas*tinggi;
     }
     
     @Override
-    public double keliling() {
+    public double hitungKeliling() {
         double sisiMiring = Math.sqrt(Math.pow(alas, 2) + Math.pow(tinggi, 2));
         return 2 * (alas + sisiMiring);
     }  
